@@ -1,0 +1,43 @@
+@import './block/general';
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+.triangle{
+    width: 0px;
+    height: 0px;
+    border: 15px solid skyblue;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+}
+.box{
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    padding: 15px 10px;
+    color: #000;
+    font-size: 20px;
+    height: 150px;
+    border-radius: 7px;
+    background-color: skyblue;
+    &::before{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: -14px;
+        width: 0px;
+        height: 0px;
+        border: 15px solid skyblue;
+        border-top: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+    }
+}
